@@ -1,2 +1,2 @@
-# First Major Project
+# Wanderlust Project
  first project.
