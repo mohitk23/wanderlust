@@ -15,6 +15,7 @@
         form.classList.add('was-validated')
       }, false)
     })
+<<<<<<< HEAD
   })()
 
  
@@ -22,3 +23,6 @@
     //   filter.addEventListener("click", ()=>{
     //     console.log("click it!")
     //   })
+=======
+  })()
+>>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
