@@ -2,12 +2,10 @@
 <div class="row mt-3">
     <div class="col-8 offset-2">
         <h1>Edit your Listing:</h1>
-<<<<<<< HEAD
+
         <form method="POST" action="/listings/<%= listing._id%>?_method=PUT" 
             novalidate class="needs-validation" enctype="multipart/form-data">
-=======
-        <form method="POST" action="/listings/<%= listing._id%>?_method=PUT" novalidate class="needs-validation">
->>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
+
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input name="listing[title]" value="<%= listing.title %>" type="text" 
@@ -17,19 +15,16 @@
                 </div>
             </div>
                 
-<<<<<<< HEAD
+
             <div class="mb-3" >
-=======
-            <div class="mb-3">
->>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
-                <label for="description" class="form-label">Description</label>
+            <label for="description" class="form-label">Description</label>
                 <textarea name="listing[description]" 
                 class="form-control" required><%= listing.description %></textarea>
                 <div class="invalid-feedback">
                     decription should be valid
                 </div>
             </div>
-<<<<<<< HEAD
+
             <div class="mb-3" >
                 Original Listing Image<br>
                 <img src="<%= originalImageUrl %>" >
@@ -41,12 +36,7 @@
                     type="file" 
                     class="form-control" 
                 >
-=======
-            <div class="mb-3">
-                <label for="image" class="form-label">Image</label>
-                <input name="listing[image]" value="<%= listing.image %>" type="text" 
-                class="form-control" required>
->>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
+
                 <div class="invalid-feedback">
                      Please enter valid link for image.
                 </div>

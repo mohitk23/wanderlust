@@ -4,11 +4,7 @@
         <h3><%= listing.title %></h3>
     </div>
     <div class="card col-6 offset-3 show-card listing-card">
-<<<<<<< HEAD
         <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
-=======
-        <img src="<%= listing.image %>" class="card-img-top show-img" alt="listing_image">
->>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
         <div class="card-body">
             <p class="card-text"><i><b>Owned by:<%= listing.owner.username %></b></i></p>
             <p class="card-text"><%= listing.description %></p> 
@@ -30,7 +26,6 @@
         <% } %>
     </div>
     <div class="col-8 offset-3 mb-3">
-<<<<<<< HEAD
         
         <% if(currUser) {%>
             <hr>
@@ -89,17 +84,7 @@
                 <label for="first-rate5" title="Amazing">5 stars</label>
               </fieldset>
             </div>
-
-=======
-        <hr>
-        <% if(currUser) {%>
-        <h4>Leave a Review</h4>
-        <form action="/listings/<%= listing._id %>/reviews" method="post" novalidate class="needs-validation">
-            <div class="mb-3 mt-3" >
-                <label for="rating" class="form-label">Rating:</label>
-                <input type="range" name="review[rating]" id="rating" min="1" max="5" class="form-range">
-            </div>
->>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
+    
             <div class="mb-3 mt-3">
                 <label for="comment" class="form-label">Comment:</label>
                 <textarea id="comment" name="review[comment]" cols="30" rows="5" class="form-control" required></textarea>
@@ -109,49 +94,36 @@
             </div>
             <button class=" btn btn-outline-dark">Submit</button>
         </form>
-<<<<<<< HEAD
         <% } %>
     
         <% if(listing.reviews.length > 0) {%>
             <hr>
         <div class="row">
             <p><b>All Reviews</b></p>
-=======
-        <hr>
-        <% } %>
-    
-        <p><b>All Reviews</b></p>
-        <div class="row">
->>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
+
+        
+
         <% for(review of listing.reviews ){%>
-            <div class="card col-5 ms-3 mb-3 ">
+            <div class="card col-5 ms-4 mb-3  ">
                 <div class="card-body">
                     <h5 class="card-title">@<%= review.author.username %></h5>
-<<<<<<< HEAD
                     <p class="starability-result"  data-rating="<%= review.rating %>"></p>
                     <p class="card-text"><%= review.comment %></p>
-                    <br>
+                    
                 </div>
-                <% if(review.author.equals(currUser._id)){ %>
+                <% if(review.author.equals(currUser)){ %>
                 <form class="mb-3" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" method="post">
                     <button class="btn btn-sm btn-dark">Delete</button>
                 </form>
                 <% } %>
-=======
-                    <p class="card-text"><%= review.comment %></p>
-                    <p class="card-text"><%= review.rating %>Stars</p>
-                </div>
-                <form class="mb-3" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" method="post">
-                    <button class="btn btn-sm btn-dark">Delete</button>
-                </form>
->>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
+
             </div>
-            
+           
         
         <% } %>
         </div>
-<<<<<<< HEAD
         <% } %>
+        
     </div>
     
     <div class="col-8 offset-3">
@@ -187,10 +159,10 @@
         </div>
         <br>
     </div>
-=======
+
     </div>
     
->>>>>>> 2fd7c92b491d92b3fbcb7bbe08c3aa8f68be8479
+
     
 </div>
 

@@ -8,7 +8,6 @@ module.exports.createReview = async(req, res)=> {
     newReview.author= req.user;
     // console.log(newReview , listing);
     listing.reviews.push(newReview);
-
    await newReview.save();
    await listing.save();
    req.flash("success", "New review created!");
